@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Home — 科技隐形，生活显形</title>
-  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+  <title>fynut — 本地优先，隐私至上</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +64,6 @@
       overflow-x: hidden;
     }
     
-    /* 细腻的字体设置 */
     .font-display-thin {
       font-family: 'Inter', sans-serif;
       font-weight: 200;
@@ -78,7 +76,6 @@
       line-height: 1.9;
     }
     
-    /* Hero区域的沉浸式背景 */
     .hero-canvas {
       position: fixed;
       top: 0;
@@ -89,7 +86,6 @@
       pointer-events: none;
     }
     
-    /* 时间光影变化 */
     .time-overlay {
       position: fixed;
       top: 0;
@@ -134,7 +130,6 @@
       --text-muted: #A09890;
     }
     
-    /* 纱帘效果 */
     .curtain-effect {
       position: absolute;
       top: 0;
@@ -152,13 +147,11 @@
       z-index: 2;
     }
     
-    /* 内容区域 */
     .content-wrapper {
       position: relative;
       z-index: 10;
     }
     
-    /* 导航栏 */
     .nav-bar {
       position: fixed;
       top: 0;
@@ -210,7 +203,6 @@
       width: 100%;
     }
     
-    /* Hero文字动画 */
     .hero-title {
       font-size: clamp(2.5rem, 8vw, 6rem);
       font-weight: 200;
@@ -238,7 +230,6 @@
       }
     }
     
-    /* 滚动指示器 */
     .scroll-indicator {
       position: absolute;
       bottom: 4rem;
@@ -265,7 +256,6 @@
       50% { opacity: 0.8; transform: scaleY(1.2); }
     }
     
-    /* 场景区块 */
     .scene-section {
       min-height: 100vh;
       display: flex;
@@ -287,7 +277,6 @@
       border-color: rgba(255, 255, 255, 0.1);
     }
     
-    /* 交互演示区 */
     .interactive-zone {
       position: relative;
       width: 100%;
@@ -343,7 +332,6 @@
       margin-top: 0.3rem;
     }
     
-    /* 分屏场景 */
     .split-scene {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -411,7 +399,6 @@
       100% { top: 90%; opacity: 0; }
     }
     
-    /* 折叠卡片 */
     .accordion-item {
       border-bottom: 1px solid rgba(58, 58, 58, 0.1);
       overflow: hidden;
@@ -477,7 +464,6 @@
       padding-bottom: 2rem;
     }
     
-    /* 时间指示器 */
     .time-indicator {
       position: fixed;
       right: 4rem;
@@ -496,6 +482,7 @@
       background: rgba(58, 58, 58, 0.2);
       transition: all 0.5s ease;
       cursor: pointer;
+      position: relative;
     }
     
     .time-dot.active {
@@ -522,15 +509,16 @@
       opacity: 0;
       transform: translateX(10px);
       transition: all 0.4s ease;
+      top: 50%;
+      transform: translateY(-50%) translateX(10px);
     }
     
     .time-dot:hover .time-label,
     .time-dot.active .time-label {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(-50%) translateX(0);
     }
     
-    /* 光晕装饰 */
     .glow-accent {
       position: absolute;
       width: 400px;
@@ -543,7 +531,6 @@
       pointer-events: none;
     }
     
-    /* 按钮样式 */
     .btn-ethereal {
       font-family: 'Inter', sans-serif;
       font-size: 0.7rem;
@@ -593,7 +580,6 @@
       color: #2D2A26;
     }
     
-    /* 淡入动画 */
     .reveal {
       opacity: 0;
       transform: translateY(60px);
@@ -605,7 +591,6 @@
       transform: translateY(0);
     }
     
-    /* 响应式 */
     @media (max-width: 768px) {
       .nav-bar {
         padding: 1.5rem 2rem;
@@ -636,7 +621,6 @@
       }
     }
     
-    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -648,26 +632,22 @@
 </head>
 <body class="time-morning">
   
-  <!-- 粒子Canvas -->
   <canvas class="hero-canvas" id="dustCanvas"></canvas>
   
-  <!-- 时间光影叠加层 -->
   <div class="time-overlay"></div>
   
-  <!-- 导航栏 -->
   <nav class="nav-bar" id="mainNav">
     <a href="#" class="font-display-thin text-lg tracking-widest" style="color: var(--text-primary);">
-      AURA HOME
+      FYNUT
     </a>
     <div class="flex items-center">
       <a href="#philosophy" class="nav-link">Philosophy</a>
       <a href="#experience" class="nav-link">Experience</a>
-      <a href="#scenes" class="nav-link">Scenes</a>
+      <a href="#products" class="nav-link">Products</a>
       <a href="#details" class="nav-link">Details</a>
     </div>
   </nav>
   
-  <!-- 时间指示器 -->
   <div class="time-indicator" id="timeIndicator">
     <div class="time-dot active" data-time="morning">
       <span class="time-label">Morning · 清晨</span>
@@ -683,23 +663,21 @@
     </div>
   </div>
   
-  <!-- 内容包装器 -->
   <div class="content-wrapper">
     
-    <!-- Hero区域 -->
     <section class="min-h-screen flex flex-col justify-center items-center relative px-8" id="hero">
       <div class="curtain-effect"></div>
       
       <div class="text-center relative z-10">
         <p class="hero-subtitle font-display-thin mb-8" style="color: var(--text-muted);">
-          INVISIBLE TECHNOLOGY · VISIBLE COMFORT
+          LOCAL-FIRST · ZERO-TRUST
         </p>
         <h1 class="hero-title font-display-thin" style="color: var(--text-primary);">
-          AURA HOME
+          FYNUT
         </h1>
         <p class="font-body-elegant text-xl md:text-2xl mt-12 max-w-2xl mx-auto reveal" style="color: var(--text-muted); animation-delay: 1.5s;">
-          当科技学会隐身，生活才开始真正显现。<br>
-          最好的智能，是让你忘记它的存在。
+          当隐私成为奢侈品，我们选择让它回归本质。<br>
+          所有计算在浏览器完成，你的数据，只有你能看见。
         </p>
       </div>
       
@@ -709,7 +687,6 @@
       </div>
     </section>
     
-    <!-- 哲学区域 -->
     <section class="scene-section" id="philosophy">
       <div class="max-w-4xl mx-auto">
         <div class="reveal">
@@ -717,80 +694,76 @@
             OUR PHILOSOPHY
           </p>
           <h2 class="font-display-thin text-3xl md:text-5xl leading-tight mb-12" style="color: var(--text-primary); letter-spacing: 0.08em;">
-            科技隐形<br>生活显形
+            本地优先<br>隐私至上
           </h2>
           <p class="font-body-elegant text-xl md:text-2xl leading-relaxed" style="color: var(--text-muted);">
-            我们相信，真正的智能不应该喧宾夺主。它应该像空气一样——
-            无处不在，却从未被察觉。当晨光唤醒空间，当温度悄然调节，
-            当音乐随心情流淌，你感受到的只是恰到好处的舒适，
-            而非冰冷的技术介入。
+            我们相信，真正的隐私保护不需要信任任何人——包括我们。
+            所有加密计算在你的浏览器本地完成，密钥由你完全掌控，
+            数据永不离开你的设备。这不是承诺，是架构决定的安全。
           </p>
         </div>
         
         <div class="grid md:grid-cols-3 gap-12 mt-20">
           <div class="reveal" style="transition-delay: 0.2s;">
             <div class="glow-accent -top-20 -left-20 opacity-50"></div>
-            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">0.1s</p>
+            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">256</p>
             <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-              极速响应，如同本能
+              AES加密位数，军用级标准
             </p>
           </div>
           <div class="reveal" style="transition-delay: 0.4s;">
-            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">0dB</p>
+            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">0</p>
             <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-              静默运行，如空气般安静
+              服务器存储的明文数据
             </p>
           </div>
           <div class="reveal" style="transition-delay: 0.6s;">
             <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">100%</p>
             <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-              完美融入，隐形于墙面
+              本地计算，离线可用
             </p>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- 交互体验区 -->
     <section class="scene-section" id="experience">
       <div class="w-full max-w-6xl mx-auto">
         <div class="text-center mb-16 reveal">
           <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
-            INVISIBLE CONTROL
+            ENCRYPTION DEMO
           </p>
           <h2 class="font-display-thin text-2xl md:text-4xl" style="color: var(--text-primary); letter-spacing: 0.1em;">
-            看不见的控制
+            看不见的加密
           </h2>
           <p class="font-body-elegant text-lg mt-6" style="color: var(--text-muted);">
-            移动鼠标，感受环境随你而变
+            移动鼠标，感受数据在指尖加密的过程
           </p>
         </div>
         
         <div class="interactive-zone reveal" id="interactiveZone">
           <div class="ambient-orb" id="ambientOrb"></div>
           
-          <!-- 传感器指示器 -->
           <div class="sensor-indicator" style="top: 20%; left: 10%;">
-            <span>TEMPERATURE</span>
-            <span class="sensor-value" id="tempValue">24°C</span>
+            <span>ALGORITHM</span>
+            <span class="sensor-value" id="algoValue">AES-256</span>
           </div>
           
           <div class="sensor-indicator" style="top: 20%; right: 10%;">
-            <span>HUMIDITY</span>
-            <span class="sensor-value" id="humidValue">55%</span>
+            <span>KEY LENGTH</span>
+            <span class="sensor-value" id="keyValue">256 bit</span>
           </div>
           
           <div class="sensor-indicator" style="bottom: 20%; left: 10%;">
-            <span>LUX</span>
-            <span class="sensor-value" id="luxValue">480</span>
+            <span>ENCRYPT TIME</span>
+            <span class="sensor-value" id="timeValue">12ms</span>
           </div>
           
           <div class="sensor-indicator" style="bottom: 20%; right: 10%;">
-            <span>MOOD</span>
-            <span class="sensor-value" id="moodValue">Calm</span>
+            <span>STATUS</span>
+            <span class="sensor-value" id="statusValue">Secure</span>
           </div>
           
-          <!-- 中心提示 -->
           <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
             <p class="font-display-thin text-sm tracking-widest" style="color: var(--text-muted);" id="zoneHint">
               MOVE TO EXPLORE
@@ -800,20 +773,16 @@
       </div>
     </section>
     
-    <!-- 场景叙事区 -->
-    <section id="scenes">
-      <!-- 场景1: 阅读 -->
+    <section id="products">
       <div class="split-scene">
         <div class="scene-image">
           <div class="scene-image-bg" style="background: linear-gradient(135deg, #F5F3EF 0%, #E8E4DD 100%);">
             <div class="w-full h-full flex items-center justify-center">
               <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="opacity: 0.3;">
-                <rect x="30" y="50" width="140" height="100" rx="4" stroke="#3A3A3A" stroke-width="1"/>
-                <path d="M100 50V150" stroke="#3A3A3A" stroke-width="1"/>
-                <path d="M50 70H80" stroke="#3A3A3A" stroke-width="0.5"/>
-                <path d="M50 85H75" stroke="#3A3A3A" stroke-width="0.5"/>
-                <path d="M120 70H150" stroke="#3A3A3A" stroke-width="0.5"/>
-                <path d="M120 85H145" stroke="#3A3A3A" stroke-width="0.5"/>
+                <rect x="50" y="60" width="100" height="80" rx="4" stroke="#3A3A3A" stroke-width="1"/>
+                <path d="M70 100h60" stroke="#3A3A3A" stroke-width="1"/>
+                <circle cx="100" cy="100" r="15" stroke="#3A3A3A" stroke-width="1"/>
+                <path d="M100 85v30M85 100h30" stroke="#3A3A3A" stroke-width="0.5"/>
               </svg>
             </div>
           </div>
@@ -822,63 +791,60 @@
           <div class="flowing-line"></div>
           <div class="max-w-md ml-auto reveal">
             <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
-              READING MODE
+              ENCRYPTION TOOLS
             </p>
             <h3 class="font-display-thin text-2xl md:text-3xl mb-6" style="color: var(--text-primary); letter-spacing: 0.08em;">
-              阅读时光
+              文件与文本加密
             </h3>
             <p class="font-body-elegant text-lg leading-relaxed mb-8" style="color: var(--text-muted);">
-              灯光自动调节至阅读最佳色温4000K，亮度柔和均匀。
-              背景音乐渐弱至若有若无，窗帘微微合拢，
-              为你创造一个专注而舒适的精神角落。
+              使用 AES-256-GCM 算法，在浏览器内完成所有加密操作。
+              支持任意大小文件，密钥由你生成、由你保管，
+              我们永远无法触及你的明文数据。
             </p>
-            <button class="btn-ethereal">体验场景</button>
+            <button class="btn-ethereal">立即体验</button>
           </div>
         </div>
       </div>
       
-      <!-- 场景2: 沐浴 -->
       <div class="split-scene">
         <div class="scene-content">
           <div class="max-w-md mr-auto reveal">
             <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
-              RELAX MODE
+              P2P TRANSFER
             </p>
             <h3 class="font-display-thin text-2xl md:text-3xl mb-6" style="color: var(--text-primary); letter-spacing: 0.08em;">
-              沐浴放松
+              点对点传输
             </h3>
             <p class="font-body-elegant text-lg leading-relaxed mb-8" style="color: var(--text-muted);">
-              水温精确预设在最舒适的42°C，浴室灯光转为温暖的2700K。
-              轻柔的环境音乐开始流淌，香薰系统释放舒缓的木质气息，
-              一天的疲惫在此刻消融。
+              基于 WebRTC 的 P2P 直连传输，文件、语音、视频直接在设备间流转。
+              无服务器中转，无速度限制，无大小限制。
+              生成一次性连接码，对方输入即连。
             </p>
-            <button class="btn-ethereal">体验场景</button>
+            <button class="btn-ethereal">立即体验</button>
           </div>
         </div>
         <div class="scene-image">
           <div class="scene-image-bg" style="background: linear-gradient(135deg, #E8E4DD 0%, #D4D0CB 100%);">
             <div class="w-full h-full flex items-center justify-center">
               <svg width="180" height="180" viewBox="0 0 180 180" fill="none" style="opacity: 0.3;">
-                <ellipse cx="90" cy="120" rx="60" ry="25" stroke="#3A3A3A" stroke-width="1"/>
-                <path d="M30 120C30 85 50 50 90 50C130 50 150 85 150 120" stroke="#3A3A3A" stroke-width="1"/>
-                <circle cx="70" cy="75" r="3" fill="#3A3A3A"/>
-                <circle cx="90" cy="68" r="2" fill="#3A3A3A"/>
-                <circle cx="110" cy="72" r="2.5" fill="#3A3A3A"/>
+                <rect x="20" y="60" width="50" height="70" rx="4" stroke="#3A3A3A" stroke-width="1"/>
+                <rect x="110" y="50" width="50" height="80" rx="4" stroke="#3A3A3A" stroke-width="1"/>
+                <path d="M70 95h40" stroke="#3A3A3A" stroke-width="1" stroke-dasharray="4 2"/>
+                <circle cx="90" cy="95" r="4" fill="#3A3A3A"/>
               </svg>
             </div>
           </div>
         </div>
       </div>
       
-      <!-- 场景3: 睡眠 -->
       <div class="split-scene">
         <div class="scene-image">
           <div class="scene-image-bg" style="background: linear-gradient(135deg, #C9BFB3 0%, #A09890 100%);">
             <div class="w-full h-full flex items-center justify-center">
               <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="opacity: 0.2;">
-                <circle cx="100" cy="100" r="60" stroke="#FAF8F5" stroke-width="1"/>
-                <path d="M75 100C75 100 85 85 100 85C115 85 125 100 125 100C125 100 115 115 100 115C85 115 75 100 75 100Z" stroke="#FAF8F5" stroke-width="1"/>
-                <circle cx="100" cy="100" r="15" stroke="#FAF8F5" stroke-width="1"/>
+                <polygon points="100,40 60,70 60,130 100,160 140,130 140,70" stroke="#FAF8F5" stroke-width="1" fill="none"/>
+                <circle cx="100" cy="100" r="25" stroke="#FAF8F5" stroke-width="1"/>
+                <path d="M85 100h30M100 85v30" stroke="#FAF8F5" stroke-width="0.5"/>
               </svg>
             </div>
           </div>
@@ -887,23 +853,22 @@
           <div class="flowing-line"></div>
           <div class="max-w-md ml-auto reveal">
             <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
-              SLEEP MODE
+              CLAW AI AGENT
             </p>
             <h3 class="font-display-thin text-2xl md:text-3xl mb-6" style="color: var(--text-primary); letter-spacing: 0.08em;">
-              入眠仪式
+              浏览器内的AI助手
             </h3>
             <p class="font-body-elegant text-lg leading-relaxed mb-8" style="color: var(--text-muted);">
-              灯光在15分钟内逐渐熄灭，模拟日落。室温缓缓降至适宜睡眠的20°C。
-              白噪音轻轻响起，遮蔽城市的喧嚣。所有设备进入静默模式，
-              只待明天第一缕阳光将你温柔唤醒。
+              基于 WebAssembly 的 AI 代理，支持自然语言对话、
+              动态页面构建、可视化组件编排与 Canvas 创意绘图。
+              代码与设计，一句话搞定。
             </p>
-            <button class="btn-ethereal">体验场景</button>
+            <button class="btn-ethereal">立即体验</button>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- 技术参数区 -->
     <section class="scene-section" id="details">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16 reveal">
@@ -914,7 +879,7 @@
             隐藏的精密
           </h2>
           <p class="font-body-elegant text-lg mt-6" style="color: var(--text-muted);">
-            点击展开，了解支撑体验的技术细节
+            点击展开，了解支撑安全的技术细节
           </p>
         </div>
         
@@ -922,16 +887,16 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div>
-                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">RESPONSE</p>
-                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">0.1秒极速响应</p>
+                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">ENCRYPTION</p>
+                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">AES-256-GCM 加密标准</p>
               </div>
               <div class="accordion-icon"></div>
             </div>
             <div class="accordion-content">
               <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-                搭载自研AURA芯片，算力达5TOPS。边缘计算架构确保所有决策在本地完成，
-                无需云端往返。多模态传感器融合算法，预判你的意图。256GB本地存储，
-                保护你的隐私数据。
+                采用 AES-256-GCM 认证加密算法，提供保密性与完整性双重保障。
+                支持 PBKDF2 密钥派生函数，可自定义迭代次数增强安全性。
+                所有加密操作在浏览器 Web Crypto API 中完成，性能优异。
               </p>
             </div>
           </div>
@@ -939,16 +904,16 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div>
-                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">SENSOR</p>
-                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">毫米级环境感知</p>
+                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">P2P</p>
+                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">WebRTC 点对点传输</p>
               </div>
               <div class="accordion-icon"></div>
             </div>
             <div class="accordion-content">
               <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-                12合1环境传感器阵列：温度精度±0.1°C，湿度精度±2%RH，
-                光照精度1 lux。毫米波雷达检测呼吸与心率，无需佩戴设备。
-                空气质量监测涵盖PM2.5、CO2、VOC等12项指标。
+                基于 WebRTC 技术实现真正的点对点连接，数据直接在设备间传输。
+                支持 SCTP 数据通道与 RTP 媒体通道，可传输文件、语音、视频。
+                端到端加密，DTLS-SRTP 安全保障，无需信任任何中间服务器。
               </p>
             </div>
           </div>
@@ -956,17 +921,16 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div>
-                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">CONNECTIVITY</p>
-                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">全协议无缝互联</p>
+                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">AI RUNTIME</p>
+                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">WebAssembly 本地推理</p>
               </div>
               <div class="accordion-icon"></div>
             </div>
             <div class="accordion-content">
               <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-                支持Matter、Zigbee 3.0、Thread、Wi-Fi 6E、蓝牙5.3全协议。
-                可连接超过500个智能设备，自动发现与配置。
-                Matter over Thread实现跨平台互通，兼容Apple HomeKit、
-                Google Home、Amazon Alexa。
+                Claw AI Agent 基于 WebAssembly 运行时，AI 模型在浏览器本地加载与推理。
+                支持对话生成、代码生成、页面构建、Canvas 绘图等多种能力。
+                用户对话数据永不上传，真正实现本地优先的 AI 体验。
               </p>
             </div>
           </div>
@@ -974,16 +938,16 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div>
-                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">PRIVACY</p>
-                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">端到端加密保护</p>
+                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">ARCHITECTURE</p>
+                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">零知识架构设计</p>
               </div>
               <div class="accordion-icon"></div>
             </div>
             <div class="accordion-content">
               <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
-                硬件级安全芯片，AES-256加密存储。本地优先架构，
-                敏感数据永不上传。端到端加密通信，即使我们也无法读取。
-                通过ISO 27001、GDPR、CCPA等多项认证。
+                所有敏感操作在客户端完成，服务器仅作为可选的信令与发现服务。
+                用户密钥由用户自己生成和保管，我们永远无法访问明文数据。
+                支持完全离线使用，真正实现"不需要信任任何人"的安全模型。
               </p>
             </div>
           </div>
@@ -991,43 +955,42 @@
       </div>
     </section>
     
-    <!-- 页脚 -->
     <footer class="py-24 px-8">
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-4 gap-16 mb-20">
           <div class="md:col-span-2">
             <p class="font-display-thin text-2xl tracking-widest mb-6" style="color: var(--text-primary);">
-              AURA HOME
+              FYNUT
             </p>
             <p class="font-body-elegant text-lg max-w-md" style="color: var(--text-muted);">
-              让科技回归隐形，让生活回归本质。
-              在看不见的地方，我们用心守护每一个舒适瞬间。
+              本地优先，隐私至上。在看不见的地方，
+              我们用技术守护你的每一个比特。
             </p>
           </div>
           <div>
-            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">EXPLORE</p>
+            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">PRODUCTS</p>
             <div class="space-y-4">
-              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">产品系列</a>
-              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">设计理念</a>
-              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">安装服务</a>
+              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">加密工具</a>
+              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">P2P传输</a>
+              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">AI Agent</a>
             </div>
           </div>
           <div>
             <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">CONNECT</p>
             <div class="space-y-4">
-              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">预约体验</a>
-              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">联系我们</a>
-              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">加入我们</a>
+              <a href="https://www.fynut.com" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">fynut.com</a>
+              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">GitHub</a>
+              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">文档</a>
             </div>
           </div>
         </div>
         
         <div class="border-t pt-12 flex flex-col md:flex-row justify-between items-center gap-6" style="border-color: rgba(58, 58, 58, 0.1);">
           <p class="font-display-thin text-xs tracking-widest" style="color: var(--text-muted);">
-            © 2025 AURA HOME. ALL RIGHTS RESERVED.
+            © 2025 fynut. ALL RIGHTS RESERVED.
           </p>
           <p class="font-display-thin text-xs tracking-widest" style="color: var(--text-muted);">
-            INVISIBLE TECHNOLOGY · VISIBLE COMFORT
+            LOCAL-FIRST · ZERO-TRUST
           </p>
         </div>
       </div>
@@ -1036,7 +999,6 @@
   </div>
   
   <script>
-    // 初始化变量
     const canvas = document.getElementById('dustCanvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
@@ -1046,7 +1008,6 @@
     let animationId = null;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
-    // 粒子类
     class DustParticle {
       constructor() {
         this.reset();
@@ -1068,7 +1029,6 @@
         this.y += this.speedY;
         this.life--;
         
-        // 微弱地跟随鼠标
         const dx = mouseX - this.x;
         const dy = mouseY - this.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -1086,12 +1046,11 @@
         const fadeRatio = this.life / this.maxLife;
         const currentOpacity = this.opacity * fadeRatio;
         
-        // 根据时间段调整颜色
         const timeClass = document.body.className;
-        let particleColor = '180, 170, 160'; // 默认暖灰
+        let particleColor = '180, 170, 160';
         
         if (timeClass.includes('time-night')) {
-          particleColor = '255, 230, 200'; // 夜间暖光
+          particleColor = '255, 230, 200';
         }
         
         ctx.beginPath();
@@ -1101,7 +1060,6 @@
       }
     }
     
-    // 初始化Canvas
     function initCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -1114,7 +1072,6 @@
       }
     }
     
-    // 动画循环
     function animate() {
       if (prefersReducedMotion) return;
       
@@ -1128,13 +1085,11 @@
       animationId = requestAnimationFrame(animate);
     }
     
-    // 滚动时间变化
     function updateTimeBasedOnScroll() {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       scrollProgress = Math.min(1, Math.max(0, scrollTop / docHeight));
       
-      // 根据滚动进度切换时间
       let timeClass = 'time-morning';
       
       if (scrollProgress < 0.25) {
@@ -1149,7 +1104,6 @@
       
       document.body.className = timeClass;
       
-      // 更新时间指示器
       const timeDots = document.querySelectorAll('.time-dot');
       const timeMap = ['morning', 'noon', 'dusk', 'night'];
       const currentIndex = timeMap.indexOf(timeClass.replace('time-', ''));
@@ -1159,7 +1113,6 @@
       });
     }
     
-    // 导航栏滚动效果
     function updateNavOnScroll() {
       const nav = document.getElementById('mainNav');
       if (window.scrollY > 100) {
@@ -1169,7 +1122,6 @@
       }
     }
     
-    // 揭示动画
     function setupRevealAnimations() {
       const reveals = document.querySelectorAll('.reveal');
       
@@ -1187,14 +1139,13 @@
       reveals.forEach(el => observer.observe(el));
     }
     
-    // 交互区域
     function setupInteractiveZone() {
       const zone = document.getElementById('interactiveZone');
       const orb = document.getElementById('ambientOrb');
-      const tempValue = document.getElementById('tempValue');
-      const humidValue = document.getElementById('humidValue');
-      const luxValue = document.getElementById('luxValue');
-      const moodValue = document.getElementById('moodValue');
+      const algoValue = document.getElementById('algoValue');
+      const keyValue = document.getElementById('keyValue');
+      const timeValue = document.getElementById('timeValue');
+      const statusValue = document.getElementById('statusValue');
       const zoneHint = document.getElementById('zoneHint');
       
       if (!zone || !orb) return;
@@ -1206,30 +1157,26 @@
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         
-        // 移动光晕
         orb.style.left = x + 'px';
         orb.style.top = y + 'px';
         
-        // 根据位置计算环境值
         const progressX = x / rect.width;
         const progressY = y / rect.height;
         
-        // 温度: 18-28°C
-        const temp = Math.round(18 + progressY * 10);
-        tempValue.textContent = temp + '°C';
+        const algos = ['AES-256', 'ChaCha20', 'AES-128'];
+        const algoIndex = Math.floor(progressX * 2.99);
+        algoValue.textContent = algos[algoIndex];
         
-        // 湿度: 40-70%
-        const humid = Math.round(40 + (1 - progressY) * 30);
-        humidValue.textContent = humid + '%';
+        const keyBits = [128, 192, 256];
+        const keyIndex = Math.floor(progressY * 2.99);
+        keyValue.textContent = keyBits[keyIndex] + ' bit';
         
-        // 光照: 100-800 lux
-        const lux = Math.round(100 + progressX * 700);
-        luxValue.textContent = lux;
+        const time = Math.round(5 + progressX * 20);
+        timeValue.textContent = time + 'ms';
         
-        // 情绪
-        const moods = ['Calm', 'Focus', 'Relax', 'Energize'];
-        const moodIndex = Math.floor(progressX * 3.99);
-        moodValue.textContent = moods[moodIndex];
+        const statuses = ['Secure', 'Encrypted', 'Locked'];
+        const statusIndex = Math.floor(progressY * 2.99);
+        statusValue.textContent = statuses[statusIndex];
         
         if (!isInteracting) {
           isInteracting = true;
@@ -1243,15 +1190,13 @@
         isInteracting = false;
         zoneHint.style.opacity = '1';
         
-        // 重置值
-        tempValue.textContent = '24°C';
-        humidValue.textContent = '55%';
-        luxValue.textContent = '480';
-        moodValue.textContent = 'Calm';
+        algoValue.textContent = 'AES-256';
+        keyValue.textContent = '256 bit';
+        timeValue.textContent = '12ms';
+        statusValue.textContent = 'Secure';
       });
     }
     
-    // 折叠卡片
     function setupAccordion() {
       const items = document.querySelectorAll('.accordion-item');
       
@@ -1261,10 +1206,8 @@
         header.addEventListener('click', () => {
           const isActive = item.classList.contains('active');
           
-          // 关闭其他
           items.forEach(i => i.classList.remove('active'));
           
-          // 切换当前
           if (!isActive) {
             item.classList.add('active');
           }
@@ -1272,7 +1215,6 @@
       });
     }
     
-    // 时间指示器点击
     function setupTimeIndicator() {
       const dots = document.querySelectorAll('.time-dot');
       
@@ -1287,7 +1229,6 @@
       });
     }
     
-    // 平滑滚动
     function setupSmoothScroll() {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -1303,13 +1244,11 @@
       });
     }
     
-    // 鼠标位置跟踪
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
     });
     
-    // 初始化
     function init() {
       initCanvas();
       
@@ -1323,7 +1262,6 @@
       setupTimeIndicator();
       setupSmoothScroll();
       
-      // 滚动事件
       let ticking = false;
       window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -1336,18 +1274,15 @@
         }
       });
       
-      // 初始触发
       updateTimeBasedOnScroll();
       updateNavOnScroll();
     }
     
-    // 窗口调整
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
     
-    // DOM加载完成后初始化
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
     } else {
