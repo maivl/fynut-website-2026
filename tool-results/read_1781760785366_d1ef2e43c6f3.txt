@@ -1,0 +1,602 @@
+     1→   700→   700→            OUR PHILOSOPHY
+     2→   701→   701→          </p>
+     3→   702→   702→          <h2 class="font-display-thin text-3xl md:text-5xl leading-tight mb-12" style="color: var(--text-primary); letter-spacing: 0.08em;">
+     4→   703→   703→            本地优先<br>隐私至上
+     5→   704→   704→          </h2>
+     6→   705→   705→          <p class="font-body-elegant text-xl md:text-2xl leading-relaxed" style="color: var(--text-muted);">
+     7→   706→   706→            我们相信，真正的隐私保护不需要信任任何人——包括我们。
+     8→   707→   707→            所有加密计算在你的浏览器本地完成，密钥由你完全掌控，
+     9→   708→   708→            数据永不离开你的设备。这不是承诺，是架构决定的安全。
+    10→   709→   709→          </p>
+    11→   710→   710→        </div>
+    12→   711→   711→        
+    13→   712→   712→        <div class="grid md:grid-cols-3 gap-12 mt-20">
+    14→   713→   713→          <div class="reveal" style="transition-delay: 0.2s;">
+    15→   714→   714→            <div class="glow-accent -top-20 -left-20 opacity-50"></div>
+    16→   715→   715→            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">256</p>
+    17→   716→   716→            <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+    18→   717→   717→              AES加密位数，军用级标准
+    19→   718→   718→            </p>
+    20→   719→   719→          </div>
+    21→   720→   720→          <div class="reveal" style="transition-delay: 0.4s;">
+    22→   721→   721→            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">0</p>
+    23→   722→   722→            <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+    24→   723→   723→              服务器存储的明文数据
+    25→   724→   724→            </p>
+    26→   725→   725→          </div>
+    27→   726→   726→          <div class="reveal" style="transition-delay: 0.6s;">
+    28→   727→   727→            <p class="font-display-thin text-5xl mb-4" style="color: var(--text-primary);">100%</p>
+    29→   728→   728→            <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+    30→   729→   729→              本地计算，离线可用
+    31→   730→   730→            </p>
+    32→   731→   731→          </div>
+    33→   732→   732→        </div>
+    34→   733→   733→      </div>
+    35→   734→   734→    </section>
+    36→   735→   735→    
+    37→   736→   736→    <section class="scene-section" id="experience">
+    38→   737→   737→      <div class="w-full max-w-6xl mx-auto">
+    39→   738→   738→        <div class="text-center mb-16 reveal">
+    40→   739→   739→          <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
+    41→   740→   740→            ENCRYPTION DEMO
+    42→   741→   741→          </p>
+    43→   742→   742→          <h2 class="font-display-thin text-2xl md:text-4xl" style="color: var(--text-primary); letter-spacing: 0.1em;">
+    44→   743→   743→            看不见的加密
+    45→   744→   744→          </h2>
+    46→   745→   745→          <p class="font-body-elegant text-lg mt-6" style="color: var(--text-muted);">
+    47→   746→   746→            移动鼠标，感受数据在指尖加密的过程
+    48→   747→   747→          </p>
+    49→   748→   748→        </div>
+    50→   749→   749→        
+    51→   750→   750→        <div class="interactive-zone reveal" id="interactiveZone">
+    52→   751→   751→          <div class="ambient-orb" id="ambientOrb"></div>
+    53→   752→   752→          
+    54→   753→   753→          <div class="sensor-indicator" style="top: 20%; left: 10%;">
+    55→   754→   754→            <span>ALGORITHM</span>
+    56→   755→   755→            <span class="sensor-value" id="algoValue">AES-256</span>
+    57→   756→   756→          </div>
+    58→   757→   757→          
+    59→   758→   758→          <div class="sensor-indicator" style="top: 20%; right: 10%;">
+    60→   759→   759→            <span>KEY LENGTH</span>
+    61→   760→   760→            <span class="sensor-value" id="keyValue">256 bit</span>
+    62→   761→   761→          </div>
+    63→   762→   762→          
+    64→   763→   763→          <div class="sensor-indicator" style="bottom: 20%; left: 10%;">
+    65→   764→   764→            <span>ENCRYPT TIME</span>
+    66→   765→   765→            <span class="sensor-value" id="timeValue">12ms</span>
+    67→   766→   766→          </div>
+    68→   767→   767→          
+    69→   768→   768→          <div class="sensor-indicator" style="bottom: 20%; right: 10%;">
+    70→   769→   769→            <span>STATUS</span>
+    71→   770→   770→            <span class="sensor-value" id="statusValue">Secure</span>
+    72→   771→   771→          </div>
+    73→   772→   772→          
+    74→   773→   773→          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+    75→   774→   774→            <p class="font-display-thin text-sm tracking-widest" style="color: var(--text-muted);" id="zoneHint">
+    76→   775→   775→              MOVE TO EXPLORE
+    77→   776→   776→            </p>
+    78→   777→   777→          </div>
+    79→   778→   778→        </div>
+    80→   779→   779→      </div>
+    81→   780→   780→    </section>
+    82→   781→   781→    
+    83→   782→   782→    <section id="products">
+    84→   783→   783→      <div class="split-scene">
+    85→   784→   784→        <div class="scene-image">
+    86→   785→   785→          <div class="scene-image-bg" style="background: linear-gradient(135deg, #F5F3EF 0%, #E8E4DD 100%);">
+    87→   786→   786→            <div class="w-full h-full flex items-center justify-center">
+    88→   787→   787→              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="opacity: 0.3;">
+    89→   788→   788→                <rect x="50" y="60" width="100" height="80" rx="4" stroke="#3A3A3A" stroke-width="1"/>
+    90→   789→   789→                <path d="M70 100h60" stroke="#3A3A3A" stroke-width="1"/>
+    91→   790→   790→                <circle cx="100" cy="100" r="15" stroke="#3A3A3A" stroke-width="1"/>
+    92→   791→   791→                <path d="M100 85v30M85 100h30" stroke="#3A3A3A" stroke-width="0.5"/>
+    93→   792→   792→              </svg>
+    94→   793→   793→            </div>
+    95→   794→   794→          </div>
+    96→   795→   795→        </div>
+    97→   796→   796→        <div class="scene-content">
+    98→   797→   797→          <div class="flowing-line"></div>
+    99→   798→   798→          <div class="max-w-md ml-auto reveal">
+   100→   799→   799→            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
+   101→   800→   800→              ENCRYPTION TOOLS
+   102→   801→   801→            </p>
+   103→   802→   802→            <h3 class="font-display-thin text-2xl md:text-3xl mb-6" style="color: var(--text-primary); letter-spacing: 0.08em;">
+   104→   803→   803→              文件与文本加密
+   105→   804→   804→            </h3>
+   106→   805→   805→            <p class="font-body-elegant text-lg leading-relaxed mb-8" style="color: var(--text-muted);">
+   107→   806→   806→              使用 AES-256-GCM 算法，在浏览器内完成所有加密操作。
+   108→   807→   807→              支持任意大小文件，密钥由你生成、由你保管，
+   109→   808→   808→              我们永远无法触及你的明文数据。
+   110→   809→   809→            </p>
+   111→   810→   810→            <button class="btn-ethereal">立即体验</button>
+   112→   811→   811→          </div>
+   113→   812→   812→        </div>
+   114→   813→   813→      </div>
+   115→   814→   814→      
+   116→   815→   815→      <div class="split-scene">
+   117→   816→   816→        <div class="scene-content">
+   118→   817→   817→          <div class="max-w-md mr-auto reveal">
+   119→   818→   818→            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
+   120→   819→   819→              P2P TRANSFER
+   121→   820→   820→            </p>
+   122→   821→   821→            <h3 class="font-display-thin text-2xl md:text-3xl mb-6" style="color: var(--text-primary); letter-spacing: 0.08em;">
+   123→   822→   822→              点对点传输
+   124→   823→   823→            </h3>
+   125→   824→   824→            <p class="font-body-elegant text-lg leading-relaxed mb-8" style="color: var(--text-muted);">
+   126→   825→   825→              基于 WebRTC 的 P2P 直连传输，文件、语音、视频直接在设备间流转。
+   127→   826→   826→              无服务器中转，无速度限制，无大小限制。
+   128→   827→   827→              生成一次性连接码，对方输入即连。
+   129→   828→   828→            </p>
+   130→   829→   829→            <button class="btn-ethereal">立即体验</button>
+   131→   830→   830→          </div>
+   132→   831→   831→        </div>
+   133→   832→   832→        <div class="scene-image">
+   134→   833→   833→          <div class="scene-image-bg" style="background: linear-gradient(135deg, #E8E4DD 0%, #D4D0CB 100%);">
+   135→   834→   834→            <div class="w-full h-full flex items-center justify-center">
+   136→   835→   835→              <svg width="180" height="180" viewBox="0 0 180 180" fill="none" style="opacity: 0.3;">
+   137→   836→   836→                <rect x="20" y="60" width="50" height="70" rx="4" stroke="#3A3A3A" stroke-width="1"/>
+   138→   837→   837→                <rect x="110" y="50" width="50" height="80" rx="4" stroke="#3A3A3A" stroke-width="1"/>
+   139→   838→   838→                <path d="M70 95h40" stroke="#3A3A3A" stroke-width="1" stroke-dasharray="4 2"/>
+   140→   839→   839→                <circle cx="90" cy="95" r="4" fill="#3A3A3A"/>
+   141→   840→   840→              </svg>
+   142→   841→   841→            </div>
+   143→   842→   842→          </div>
+   144→   843→   843→        </div>
+   145→   844→   844→      </div>
+   146→   845→   845→      
+   147→   846→   846→      <div class="split-scene">
+   148→   847→   847→        <div class="scene-image">
+   149→   848→   848→          <div class="scene-image-bg" style="background: linear-gradient(135deg, #C9BFB3 0%, #A09890 100%);">
+   150→   849→   849→            <div class="w-full h-full flex items-center justify-center">
+   151→   850→   850→              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="opacity: 0.2;">
+   152→   851→   851→                <polygon points="100,40 60,70 60,130 100,160 140,130 140,70" stroke="#FAF8F5" stroke-width="1" fill="none"/>
+   153→   852→   852→                <circle cx="100" cy="100" r="25" stroke="#FAF8F5" stroke-width="1"/>
+   154→   853→   853→                <path d="M85 100h30M100 85v30" stroke="#FAF8F5" stroke-width="0.5"/>
+   155→   854→   854→              </svg>
+   156→   855→   855→            </div>
+   157→   856→   856→          </div>
+   158→   857→   857→        </div>
+   159→   858→   858→        <div class="scene-content">
+   160→   859→   859→          <div class="flowing-line"></div>
+   161→   860→   860→          <div class="max-w-md ml-auto reveal">
+   162→   861→   861→            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
+   163→   862→   862→              CLAW AI AGENT
+   164→   863→   863→            </p>
+   165→   864→   864→            <h3 class="font-display-thin text-2xl md:text-3xl mb-6" style="color: var(--text-primary); letter-spacing: 0.08em;">
+   166→   865→   865→              浏览器内的AI助手
+   167→   866→   866→            </h3>
+   168→   867→   867→            <p class="font-body-elegant text-lg leading-relaxed mb-8" style="color: var(--text-muted);">
+   169→   868→   868→              基于 WebAssembly 的 AI 代理，支持自然语言对话、
+   170→   869→   869→              动态页面构建、可视化组件编排与 Canvas 创意绘图。
+   171→   870→   870→              代码与设计，一句话搞定。
+   172→   871→   871→            </p>
+   173→   872→   872→            <button class="btn-ethereal">立即体验</button>
+   174→   873→   873→          </div>
+   175→   874→   874→        </div>
+   176→   875→   875→      </div>
+   177→   876→   876→    </section>
+   178→   877→   877→    
+   179→   878→   878→    <section class="scene-section" id="details">
+   180→   879→   879→      <div class="max-w-3xl mx-auto">
+   181→   880→   880→        <div class="text-center mb-16 reveal">
+   182→   881→   881→          <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">
+   183→   882→   882→            TECHNICAL DETAILS
+   184→   883→   883→          </p>
+   185→   884→   884→          <h2 class="font-display-thin text-2xl md:text-4xl" style="color: var(--text-primary); letter-spacing: 0.1em;">
+   186→   885→   885→            隐藏的精密
+   187→   886→   886→          </h2>
+   188→   887→   887→          <p class="font-body-elegant text-lg mt-6" style="color: var(--text-muted);">
+   189→   888→   888→            点击展开，了解支撑安全的技术细节
+   190→   889→   889→          </p>
+   191→   890→   890→        </div>
+   192→   891→   891→        
+   193→   892→   892→        <div class="reveal">
+   194→   893→   893→          <div class="accordion-item">
+   195→   894→   894→            <div class="accordion-header">
+   196→   895→   895→              <div>
+   197→   896→   896→                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">ENCRYPTION</p>
+   198→   897→   897→                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">AES-256-GCM 加密标准</p>
+   199→   898→   898→              </div>
+   200→   899→   899→              <div class="accordion-icon"></div>
+   201→   900→   900→            </div>
+   202→   901→   901→            <div class="accordion-content">
+   203→   902→   902→              <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+   204→   903→   903→                采用 AES-256-GCM 认证加密算法，提供保密性与完整性双重保障。
+   205→   904→   904→                支持 PBKDF2 密钥派生函数，可自定义迭代次数增强安全性。
+   206→   905→   905→                所有加密操作在浏览器 Web Crypto API 中完成，性能优异。
+   207→   906→   906→              </p>
+   208→   907→   907→            </div>
+   209→   908→   908→          </div>
+   210→   909→   909→          
+   211→   910→   910→          <div class="accordion-item">
+   212→   911→   911→            <div class="accordion-header">
+   213→   912→   912→              <div>
+   214→   913→   913→                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">P2P</p>
+   215→   914→   914→                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">WebRTC 点对点传输</p>
+   216→   915→   915→              </div>
+   217→   916→   916→              <div class="accordion-icon"></div>
+   218→   917→   917→            </div>
+   219→   918→   918→            <div class="accordion-content">
+   220→   919→   919→              <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+   221→   920→   920→                基于 WebRTC 技术实现真正的点对点连接，数据直接在设备间传输。
+   222→   921→   921→                支持 SCTP 数据通道与 RTP 媒体通道，可传输文件、语音、视频。
+   223→   922→   922→                端到端加密，DTLS-SRTP 安全保障，无需信任任何中间服务器。
+   224→   923→   923→              </p>
+   225→   924→   924→            </div>
+   226→   925→   925→          </div>
+   227→   926→   926→          
+   228→   927→   927→          <div class="accordion-item">
+   229→   928→   928→            <div class="accordion-header">
+   230→   929→   929→              <div>
+   231→   930→   930→                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">AI RUNTIME</p>
+   232→   931→   931→                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">WebAssembly 本地推理</p>
+   233→   932→   932→              </div>
+   234→   933→   933→              <div class="accordion-icon"></div>
+   235→   934→   934→            </div>
+   236→   935→   935→            <div class="accordion-content">
+   237→   936→   936→              <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+   238→   937→   937→                Claw AI Agent 基于 WebAssembly 运行时，AI 模型在浏览器本地加载与推理。
+   239→   938→   938→                支持对话生成、代码生成、页面构建、Canvas 绘图等多种能力。
+   240→   939→   939→                用户对话数据永不上传，真正实现本地优先的 AI 体验。
+   241→   940→   940→              </p>
+   242→   941→   941→            </div>
+   243→   942→   942→          </div>
+   244→   943→   943→          
+   245→   944→   944→          <div class="accordion-item">
+   246→   945→   945→            <div class="accordion-header">
+   247→   946→   946→              <div>
+   248→   947→   947→                <p class="font-display-thin text-xs tracking-widest mb-2" style="color: var(--text-muted);">ARCHITECTURE</p>
+   249→   948→   948→                <p class="font-body-elegant text-xl" style="color: var(--text-primary);">零知识架构设计</p>
+   250→   949→   949→              </div>
+   251→   950→   950→              <div class="accordion-icon"></div>
+   252→   951→   951→            </div>
+   253→   952→   952→            <div class="accordion-content">
+   254→   953→   953→              <p class="font-body-elegant text-lg" style="color: var(--text-muted);">
+   255→   954→   954→                所有敏感操作在客户端完成，服务器仅作为可选的信令与发现服务。
+   256→   955→   955→                用户密钥由用户自己生成和保管，我们永远无法访问明文数据。
+   257→   956→   956→                支持完全离线使用，真正实现"不需要信任任何人"的安全模型。
+   258→   957→   957→              </p>
+   259→   958→   958→            </div>
+   260→   959→   959→          </div>
+   261→   960→   960→        </div>
+   262→   961→   961→      </div>
+   263→   962→   962→    </section>
+   264→   963→   963→    
+   265→   964→   964→    <footer class="py-24 px-8">
+   266→   965→   965→      <div class="max-w-6xl mx-auto">
+   267→   966→   966→        <div class="grid md:grid-cols-4 gap-16 mb-20">
+   268→   967→   967→          <div class="md:col-span-2">
+   269→   968→   968→            <p class="font-display-thin text-2xl tracking-widest mb-6" style="color: var(--text-primary);">
+   270→   969→   969→              FYNUT
+   271→   970→   970→            </p>
+   272→   971→   971→            <p class="font-body-elegant text-lg max-w-md" style="color: var(--text-muted);">
+   273→   972→   972→              本地优先，隐私至上。在看不见的地方，
+   274→   973→   973→              我们用技术守护你的每一个比特。
+   275→   974→   974→            </p>
+   276→   975→   975→          </div>
+   277→   976→   976→          <div>
+   278→   977→   977→            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">PRODUCTS</p>
+   279→   978→   978→            <div class="space-y-4">
+   280→   979→   979→              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">加密工具</a>
+   281→   980→   980→              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">P2P传输</a>
+   282→   981→   981→              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">AI Agent</a>
+   283→   982→   982→            </div>
+   284→   983→   983→          </div>
+   285→   984→   984→          <div>
+   286→   985→   985→            <p class="font-display-thin text-xs tracking-widest mb-6" style="color: var(--text-muted);">CONNECT</p>
+   287→   986→   986→            <div class="space-y-4">
+   288→   987→   987→              <a href="https://www.fynut.com" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">fynut.com</a>
+   289→   988→   988→              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">GitHub</a>
+   290→   989→   989→              <a href="#" class="block font-body-elegant text-lg hover:opacity-60 transition-opacity" style="color: var(--text-primary);">文档</a>
+   291→   990→   990→            </div>
+   292→   991→   991→          </div>
+   293→   992→   992→        </div>
+   294→   993→   993→        
+   295→   994→   994→        <div class="border-t pt-12 flex flex-col md:flex-row justify-between items-center gap-6" style="border-color: rgba(58, 58, 58, 0.1);">
+   296→   995→   995→          <p class="font-display-thin text-xs tracking-widest" style="color: var(--text-muted);">
+   297→   996→   996→            © 2025 fynut. ALL RIGHTS RESERVED.
+   298→   997→   997→          </p>
+   299→   998→   998→          <p class="font-display-thin text-xs tracking-widest" style="color: var(--text-muted);">
+   300→   999→   999→            LOCAL-FIRST · ZERO-TRUST
+   301→  1000→  1000→          </p>
+   302→  1001→  1001→        </div>
+   303→  1002→  1002→      </div>
+   304→  1003→  1003→    </footer>
+   305→  1004→  1004→    
+   306→  1005→  1005→  </div>
+   307→  1006→  1006→  
+   308→  1007→  1007→  <script>
+   309→  1008→  1008→    const canvas = document.getElementById('dustCanvas');
+   310→  1009→  1009→    const ctx = canvas.getContext('2d');
+   311→  1010→  1010→    let particles = [];
+   312→  1011→  1011→    let mouseX = 0;
+   313→  1012→  1012→    let mouseY = 0;
+   314→  1013→  1013→    let scrollProgress = 0;
+   315→  1014→  1014→    let animationId = null;
+   316→  1015→  1015→    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   317→  1016→  1016→    
+   318→  1017→  1017→    class DustParticle {
+   319→  1018→  1018→      constructor() {
+   320→  1019→  1019→        this.reset();
+   321→  1020→  1020→      }
+   322→  1021→  1021→      
+   323→  1022→  1022→      reset() {
+   324→  1023→  1023→        this.x = Math.random() * canvas.width;
+   325→  1024→  1024→        this.y = Math.random() * canvas.height;
+   326→  1025→  1025→        this.size = Math.random() * 2 + 0.5;
+   327→  1026→  1026→        this.speedX = (Math.random() - 0.5) * 0.3;
+   328→  1027→  1027→        this.speedY = (Math.random() - 0.5) * 0.3;
+   329→  1028→  1028→        this.opacity = Math.random() * 0.4 + 0.1;
+   330→  1029→  1029→        this.life = Math.random() * 200 + 100;
+   331→  1030→  1030→        this.maxLife = this.life;
+   332→  1031→  1031→      }
+   333→  1032→  1032→      
+   334→  1033→  1033→      update() {
+   335→  1034→  1034→        this.x += this.speedX;
+   336→  1035→  1035→        this.y += this.speedY;
+   337→  1036→  1036→        this.life--;
+   338→  1037→  1037→        
+   339→  1038→  1038→        const dx = mouseX - this.x;
+   340→  1039→  1039→        const dy = mouseY - this.y;
+   341→  1040→  1040→        const dist = Math.sqrt(dx * dx + dy * dy);
+   342→  1041→  1041→        if (dist < 200 && dist > 0) {
+   343→  1042→  1042→          this.x += dx / dist * 0.2;
+   344→  1043→  1043→          this.y += dy / dist * 0.2;
+   345→  1044→  1044→        }
+   346→  1045→  1045→        
+   347→  1046→  1046→        if (this.life <= 0 || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+   348→  1047→  1047→          this.reset();
+   349→  1048→  1048→        }
+   350→  1049→  1049→      }
+   351→  1050→  1050→      
+   352→  1051→  1051→      draw() {
+   353→  1052→  1052→        const fadeRatio = this.life / this.maxLife;
+   354→  1053→  1053→        const currentOpacity = this.opacity * fadeRatio;
+   355→  1054→  1054→        
+   356→  1055→  1055→        const timeClass = document.body.className;
+   357→  1056→  1056→        let particleColor = '180, 170, 160';
+   358→  1057→  1057→        
+   359→  1058→  1058→        if (timeClass.includes('time-night')) {
+   360→  1059→  1059→          particleColor = '255, 230, 200';
+   361→  1060→  1060→        }
+   362→  1061→  1061→        
+   363→  1062→  1062→        ctx.beginPath();
+   364→  1063→  1063→        ctx.arc(this.x, this.y, Math.max(0.1, this.size), 0, Math.PI * 2);
+   365→  1064→  1064→        ctx.fillStyle = `rgba(${particleColor}, ${currentOpacity})`;
+   366→  1065→  1065→        ctx.fill();
+   367→  1066→  1066→      }
+   368→  1067→  1067→    }
+   369→  1068→  1068→    
+   370→  1069→  1069→    function initCanvas() {
+   371→  1070→  1070→      canvas.width = window.innerWidth;
+   372→  1071→  1071→      canvas.height = window.innerHeight;
+   373→  1072→  1072→      
+   374→  1073→  1073→      particles = [];
+   375→  1074→  1074→      const particleCount = prefersReducedMotion ? 20 : 80;
+   376→  1075→  1075→      
+   377→  1076→  1076→      for (let i = 0; i < particleCount; i++) {
+   378→  1077→  1077→        particles.push(new DustParticle());
+   379→  1078→  1078→      }
+   380→  1079→  1079→    }
+   381→  1080→  1080→    
+   382→  1081→  1081→    function animate() {
+   383→  1082→  1082→      if (prefersReducedMotion) return;
+   384→  1083→  1083→      
+   385→  1084→  1084→      ctx.clearRect(0, 0, canvas.width, canvas.height);
+   386→  1085→  1085→      
+   387→  1086→  1086→      particles.forEach(particle => {
+   388→  1087→  1087→        particle.update();
+   389→  1088→  1088→        particle.draw();
+   390→  1089→  1089→      });
+   391→  1090→  1090→      
+   392→  1091→  1091→      animationId = requestAnimationFrame(animate);
+   393→  1092→  1092→    }
+   394→  1093→  1093→    
+   395→  1094→  1094→    function updateTimeBasedOnScroll() {
+   396→  1095→  1095→      const scrollTop = window.scrollY;
+   397→  1096→  1096→      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+   398→  1097→  1097→      scrollProgress = Math.min(1, Math.max(0, scrollTop / docHeight));
+   399→  1098→  1098→      
+   400→  1099→  1099→      let timeClass = 'time-morning';
+   401→  1100→  1100→      
+   402→  1101→  1101→      if (scrollProgress < 0.25) {
+   403→  1102→  1102→        timeClass = 'time-morning';
+   404→  1103→  1103→      } else if (scrollProgress < 0.5) {
+   405→  1104→  1104→        timeClass = 'time-noon';
+   406→  1105→  1105→      } else if (scrollProgress < 0.75) {
+   407→  1106→  1106→        timeClass = 'time-dusk';
+   408→  1107→  1107→      } else {
+   409→  1108→  1108→        timeClass = 'time-night';
+   410→  1109→  1109→      }
+   411→  1110→  1110→      
+   412→  1111→  1111→      document.body.className = timeClass;
+   413→  1112→  1112→      
+   414→  1113→  1113→      const timeDots = document.querySelectorAll('.time-dot');
+   415→  1114→  1114→      const timeMap = ['morning', 'noon', 'dusk', 'night'];
+   416→  1115→  1115→      const currentIndex = timeMap.indexOf(timeClass.replace('time-', ''));
+   417→  1116→  1116→      
+   418→  1117→  1117→      timeDots.forEach((dot, index) => {
+   419→  1118→  1118→        dot.classList.toggle('active', index === currentIndex);
+   420→  1119→  1119→      });
+   421→  1120→  1120→    }
+   422→  1121→  1121→    
+   423→  1122→  1122→    function updateNavOnScroll() {
+   424→  1123→  1123→      const nav = document.getElementById('mainNav');
+   425→  1124→  1124→      if (window.scrollY > 100) {
+   426→  1125→  1125→        nav.classList.add('scrolled');
+   427→  1126→  1126→      } else {
+   428→  1127→  1127→        nav.classList.remove('scrolled');
+   429→  1128→  1128→      }
+   430→  1129→  1129→    }
+   431→  1130→  1130→    
+   432→  1131→  1131→    function setupRevealAnimations() {
+   433→  1132→  1132→      const reveals = document.querySelectorAll('.reveal');
+   434→  1133→  1133→      
+   435→  1134→  1134→      const observer = new IntersectionObserver((entries) => {
+   436→  1135→  1135→        entries.forEach(entry => {
+   437→  1136→  1136→          if (entry.isIntersecting) {
+   438→  1137→  1137→            entry.target.classList.add('visible');
+   439→  1138→  1138→          }
+   440→  1139→  1139→        });
+   441→  1140→  1140→      }, {
+   442→  1141→  1141→        threshold: 0.1,
+   443→  1142→  1142→        rootMargin: '0px 0px -80px 0px'
+   444→  1143→  1143→      });
+   445→  1144→  1144→      
+   446→  1145→  1145→      reveals.forEach(el => observer.observe(el));
+   447→  1146→  1146→    }
+   448→  1147→  1147→    
+   449→  1148→  1148→    function setupInteractiveZone() {
+   450→  1149→  1149→      const zone = document.getElementById('interactiveZone');
+   451→  1150→  1150→      const orb = document.getElementById('ambientOrb');
+   452→  1151→  1151→      const algoValue = document.getElementById('algoValue');
+   453→  1152→  1152→      const keyValue = document.getElementById('keyValue');
+   454→  1153→  1153→      const timeValue = document.getElementById('timeValue');
+   455→  1154→  1154→      const statusValue = document.getElementById('statusValue');
+   456→  1155→  1155→      const zoneHint = document.getElementById('zoneHint');
+   457→  1156→  1156→      
+   458→  1157→  1157→      if (!zone || !orb) return;
+   459→  1158→  1158→      
+   460→  1159→  1159→      let isInteracting = false;
+   461→  1160→  1160→      
+   462→  1161→  1161→      zone.addEventListener('mousemove', (e) => {
+   463→  1162→  1162→        const rect = zone.getBoundingClientRect();
+   464→  1163→  1163→        const x = e.clientX - rect.left;
+   465→  1164→  1164→        const y = e.clientY - rect.top;
+   466→  1165→  1165→        
+   467→  1166→  1166→        orb.style.left = x + 'px';
+   468→  1167→  1167→        orb.style.top = y + 'px';
+   469→  1168→  1168→        
+   470→  1169→  1169→        const progressX = x / rect.width;
+   471→  1170→  1170→        const progressY = y / rect.height;
+   472→  1171→  1171→        
+   473→  1172→  1172→        const algos = ['AES-256', 'ChaCha20', 'AES-128'];
+   474→  1173→  1173→        const algoIndex = Math.floor(progressX * 2.99);
+   475→  1174→  1174→        algoValue.textContent = algos[algoIndex];
+   476→  1175→  1175→        
+   477→  1176→  1176→        const keyBits = [128, 192, 256];
+   478→  1177→  1177→        const keyIndex = Math.floor(progressY * 2.99);
+   479→  1178→  1178→        keyValue.textContent = keyBits[keyIndex] + ' bit';
+   480→  1179→  1179→        
+   481→  1180→  1180→        const time = Math.round(5 + progressX * 20);
+   482→  1181→  1181→        timeValue.textContent = time + 'ms';
+   483→  1182→  1182→        
+   484→  1183→  1183→        const statuses = ['Secure', 'Encrypted', 'Locked'];
+   485→  1184→  1184→        const statusIndex = Math.floor(progressY * 2.99);
+   486→  1185→  1185→        statusValue.textContent = statuses[statusIndex];
+   487→  1186→  1186→        
+   488→  1187→  1187→        if (!isInteracting) {
+   489→  1188→  1188→          isInteracting = true;
+   490→  1189→  1189→          zoneHint.style.opacity = '0';
+   491→  1190→  1190→        }
+   492→  1191→  1191→      });
+   493→  1192→  1192→      
+   494→  1193→  1193→      zone.addEventListener('mouseleave', () => {
+   495→  1194→  1194→        orb.style.left = '50%';
+   496→  1195→  1195→        orb.style.top = '50%';
+   497→  1196→  1196→        isInteracting = false;
+   498→  1197→  1197→        zoneHint.style.opacity = '1';
+   499→  1198→  1198→        
+   500→  1199→  1199→        algoValue.textContent = 'AES-256';
+   501→  1200→  1200→        keyValue.textContent = '256 bit';
+   502→  1201→  1201→        timeValue.textContent = '12ms';
+   503→  1202→  1202→        statusValue.textContent = 'Secure';
+   504→  1203→  1203→      });
+   505→  1204→  1204→    }
+   506→  1205→  1205→    
+   507→  1206→  1206→    function setupAccordion() {
+   508→  1207→  1207→      const items = document.querySelectorAll('.accordion-item');
+   509→  1208→  1208→      
+   510→  1209→  1209→      items.forEach(item => {
+   511→  1210→  1210→        const header = item.querySelector('.accordion-header');
+   512→  1211→  1211→        
+   513→  1212→  1212→        header.addEventListener('click', () => {
+   514→  1213→  1213→          const isActive = item.classList.contains('active');
+   515→  1214→  1214→          
+   516→  1215→  1215→          items.forEach(i => i.classList.remove('active'));
+   517→  1216→  1216→          
+   518→  1217→  1217→          if (!isActive) {
+   519→  1218→  1218→            item.classList.add('active');
+   520→  1219→  1219→          }
+   521→  1220→  1220→        });
+   522→  1221→  1221→      });
+   523→  1222→  1222→    }
+   524→  1223→  1223→    
+   525→  1224→  1224→    function setupTimeIndicator() {
+   526→  1225→  1225→      const dots = document.querySelectorAll('.time-dot');
+   527→  1226→  1226→      
+   528→  1227→  1227→      dots.forEach(dot => {
+   529→  1228→  1228→        dot.addEventListener('click', () => {
+   530→  1229→  1229→          const time = dot.dataset.time;
+   531→  1230→  1230→          document.body.className = `time-${time}`;
+   532→  1231→  1231→          
+   533→  1232→  1232→          dots.forEach(d => d.classList.remove('active'));
+   534→  1233→  1233→          dot.classList.add('active');
+   535→  1234→  1234→        });
+   536→  1235→  1235→      });
+   537→  1236→  1236→    }
+   538→  1237→  1237→    
+   539→  1238→  1238→    function setupSmoothScroll() {
+   540→  1239→  1239→      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+   541→  1240→  1240→        anchor.addEventListener('click', function(e) {
+   542→  1241→  1241→          e.preventDefault();
+   543→  1242→  1242→          const target = document.querySelector(this.getAttribute('href'));
+   544→  1243→  1243→          if (target) {
+   545→  1244→  1244→            target.scrollIntoView({
+   546→  1245→  1245→              behavior: 'smooth',
+   547→  1246→  1246→              block: 'start'
+   548→  1247→  1247→            });
+   549→  1248→  1248→          }
+   550→  1249→  1249→        });
+   551→  1250→  1250→      });
+   552→  1251→  1251→    }
+   553→  1252→  1252→    
+   554→  1253→  1253→    document.addEventListener('mousemove', (e) => {
+   555→  1254→  1254→      mouseX = e.clientX;
+   556→  1255→  1255→      mouseY = e.clientY;
+   557→  1256→  1256→    });
+   558→  1257→  1257→    
+   559→  1258→  1258→    function init() {
+   560→  1259→  1259→      initCanvas();
+   561→  1260→  1260→      
+   562→  1261→  1261→      if (!prefersReducedMotion) {
+   563→  1262→  1262→        animate();
+   564→  1263→  1263→      }
+   565→  1264→  1264→      
+   566→  1265→  1265→      setupRevealAnimations();
+   567→  1266→  1266→      setupInteractiveZone();
+   568→  1267→  1267→      setupAccordion();
+   569→  1268→  1268→      setupTimeIndicator();
+   570→  1269→  1269→      setupSmoothScroll();
+   571→  1270→  1270→      
+   572→  1271→  1271→      let ticking = false;
+   573→  1272→  1272→      window.addEventListener('scroll', () => {
+   574→  1273→  1273→        if (!ticking) {
+   575→  1274→  1274→          requestAnimationFrame(() => {
+   576→  1275→  1275→            updateTimeBasedOnScroll();
+   577→  1276→  1276→            updateNavOnScroll();
+   578→  1277→  1277→            ticking = false;
+   579→  1278→  1278→          });
+   580→  1279→  1279→          ticking = true;
+   581→  1280→  1280→        }
+   582→  1281→  1281→      });
+   583→  1282→  1282→      
+   584→  1283→  1283→      updateTimeBasedOnScroll();
+   585→  1284→  1284→      updateNavOnScroll();
+   586→  1285→  1285→    }
+   587→  1286→  1286→    
+   588→  1287→  1287→    window.addEventListener('resize', () => {
+   589→  1288→  1288→      canvas.width = window.innerWidth;
+   590→  1289→  1289→      canvas.height = window.innerHeight;
+   591→  1290→  1290→    });
+   592→  1291→  1291→    
+   593→  1292→  1292→    if (document.readyState === 'loading') {
+   594→  1293→  1293→      document.addEventListener('DOMContentLoaded', init);
+   595→  1294→  1294→    } else {
+   596→  1295→  1295→      init();
+   597→  1296→  1296→    }
+   598→  1297→  1297→  </script>
+   599→  1298→  1298→<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0d7ea801de10574',t:'MTc4MTc2MDc3Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+   600→  1299→  1299→</html>
+   601→
+   602→[showing lines 700-1299 of 1300; use offset=1300 with limit to continue reading]
