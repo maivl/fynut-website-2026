@@ -53,3 +53,15 @@ server.log
 # Skills directory
 /skills/
 dist
+
+# === Sandbox / local-only artifacts ===
+.env
+.env.*
+!.env.example
+.zscripts/
+tool-results/
+download/
+upload/
+examples/
+worklog.md
+server.log
