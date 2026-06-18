@@ -14,6 +14,8 @@ export default defineConfig({
     port: 3000,
     host: "0.0.0.0",
     strictPort: true,
+    // Allow the sandbox gateway host (and any other) to reach the dev server.
+    allowedHosts: true,
     fs: {
       // Avoid Vite scanning skills/examples/etc. for deps
       allow: [fileURLToPath(new URL(".", import.meta.url))],
@@ -23,6 +25,7 @@ export default defineConfig({
     port: 3000,
     host: "0.0.0.0",
     strictPort: true,
+    allowedHosts: true,
   },
   build: {
     target: "esnext",
